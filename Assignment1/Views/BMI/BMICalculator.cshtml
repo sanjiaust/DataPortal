@@ -1,0 +1,65 @@
+﻿@model Assignment1.Models.BMIViewModel
+
+<h2>BMI Calculator</h2>
+
+@using (Html.BeginForm("CalculateBMI", "BMI", FormMethod.Post))
+{
+@Html.AntiForgeryToken()
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Feet, "Height (Feet):")
+    @Html.TextBoxFor(model => model.Feet, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Feet)
+</div>
+<div class="form-group">
+    @Html.LabelFor(model => model.Inches, "Height (Inches):")
+    @Html.TextBoxFor(model => model.Inches, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Inches)
+</div>
+<div class="form-group">
+    @Html.LabelFor(model => model.Weight, "Weight (Kg):")
+    @Html.TextBoxFor(model => model.Weight, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Weight)
+</div>
+
+<div class="form-group mt-3">
+    <input type="submit" value="Calculate BMI" class="btn btn-primary" />
+</div>
+}
+
+@if (ViewBag.BMI != null)
+{
+<h4>Your BMI is: @ViewBag.BMI</h4>
+}
+
+<div class="card mt-5">
+    <div class="card-body">
+        <h4 class="card-title">BMI Chart</h4>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>BMI Range</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Under 18.5</td>
+                    <td>Underweight</td>
+                </tr>
+                <tr>
+                    <td>18.5 - 24.9</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>25 - 29.9</td>
+                    <td>Overweight</td>
+                </tr>
+                <tr>
+                    <td>30 and over</td>
+                    <td>Obese</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

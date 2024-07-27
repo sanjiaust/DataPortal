@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main class="container mt-5">
+    <!-- Header section -->
+    <section class="text-center bg-primary text-white p-5 rounded">
+        <h1 id="title">Welcome to DataPortal</h1>
+        <p class="lead">Your Personal Information Gateway</p>
+        <p><a href="@Url.Action("About", "Home")" class="btn btn-light btn-lg rounded-pill shadow-sm">Learn more &raquo;</a></p>
+    </section>
+
+    <!-- Features section -->
+    <div class="row mt-5">
+        <section class="col-md-4 text-center">
+            <h2 id="importanceTitle">The Importance of Data</h2>
+            <p>
+                Explore why storing and organizing information is crucial for businesses and individuals alike. From decision-making to analysis, data drives progress.
+            </p>
+            <p><a class="btn btn-outline-primary" href="#importanceDetails">Learn more &raquo;</a></p>
+        </section>
+        <section class="col-md-4 text-center">
+            <h2 id="sortingTitle">Sorting Techniques</h2>
+            <p>Learn about various sorting algorithms and techniques that ensure your data is presented in a meaningful and efficient manner.</p>
+            <p><a class="btn btn-outline-primary" href="#sortingDetails">Learn more &raquo;</a></p>
+        </section>
+        <section class="col-md-4 text-center">
+            <h2 id="aspnetTitle">ASP.NET Solutions</h2>
+            <p>Discover how ASP.NET empowers developers to efficiently store, retrieve, and display information in a sorted and organized fashion.</p>
+            <p><a class="btn btn-outline-primary" href="#aspnetDetails">Learn more &raquo;</a></p>
+        </section>
+    </div>
+
+    <!-- Additional sections -->
+    <div class="row mt-5">
+        <section class="col-md-6">
+            <h2 id="securityTitle">Security and Privacy</h2>
+            <p>DataPortal prioritizes the security and privacy of your information. Learn about our advanced security measures that protect your data.</p>
+            <p><a class="btn btn-outline-dark" href="#securityDetails">Learn more &raquo;</a></p>
+        </section>
+        <section class="col-md-6">
+            <h2 id="customizationTitle">Customization and Flexibility</h2>
+            <p>Customize your DataPortal experience to fit your specific needs. From personalized dashboards to flexible data views, we have you covered.</p>
+            <p><a class="btn btn-outline-dark" href="#customizationDetails">Learn more &raquo;</a></p>
+        </section>
+    </div>
+
+    <!-- Learn More section -->
+    <section id="learnMore" class="mt-5">
+        <h2 class="text-center">Why Information Matters</h2>
+        <p class="text-center">
+            Discover the significance of organized data and how DataPortal can help you present it effectively. Whether you're a business professional or an individual user, DataPortal offers robust solutions to manage your data efficiently.
+        </p>
+    </section>
+</main>
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")

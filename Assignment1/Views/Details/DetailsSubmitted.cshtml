@@ -1,0 +1,17 @@
+﻿@model Assignment1.UserDetailsViewModel
+
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-body">
+            <h2 class="card-title">Entered Details</h2>
+            <p><strong>Full Name:</strong> @Model.FullName</p>
+            <p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
+            <p><strong>Age:</strong> @Model.Age</p>
+            <p><strong>Gender:</strong> @Model.Gender</p>
+
+            <p class="mt-4">Thank you for submitting your details!</p>
+
+            <a href="@Url.Action("Index", "Details")" class="btn btn-primary mt-3">Click here to enter new details</a>
+        </div>
+    </div>
+</div>
